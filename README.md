@@ -28,13 +28,15 @@
 
    ```bash
    $ hexo new 'my_post'
-   ``` 
+   ```
 
 4. 本地启动
 
    ```bash
    $ hexo s [g]
    $ open http://localhost:4000
+   # 或者直接使用脚本启动
+   $ ./deploy.sh
    ```
 
 5. 部署到服务器
@@ -43,3 +45,4 @@
    $ hexo d
    $ open https://deepexi.github.io
    ```
+
