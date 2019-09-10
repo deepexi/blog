@@ -1,3 +1,12 @@
+---
+title: 上传 jar 到 maven 中心仓库
+date: 2019-09-10 17:09:17
+tags:
+    - maven
+categories:
+    - maven
+---
+
 # 上传 jar 到 maven 中心仓库
 
 ## 一、前奏准备
@@ -19,6 +28,7 @@
 
 ***其实管理员主要是审核 Group Id***
 
-![创建issue](https://raw.githubusercontent.com/deepexi/blog/master/source/_posts/image/issue审核结果.png)
+![创建issue](https://raw.githubusercontent.com/deepexi/blog/master/source/_posts/image/issue审核状态.png)
 
 这里可以看到审核结果，第一次审核有可能会需要比较长的时间，因为时差可能需要一天左右。
+
