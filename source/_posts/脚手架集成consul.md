@@ -187,7 +187,7 @@ public class ServiceController {
 ok，当走到这一步已经差不多要大功告成了：）
 
  - 将两个项目启动，并打开 http://localhost:8500/ui
- ![consul首页](./image/1593761510458.png)
+ ![consul首页](/images/1593761510458.png)
  首页出现了绿色的打钩即说明健康检查正常
 
  - 测试远程调用接口
