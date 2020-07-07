@@ -3,7 +3,7 @@ title: 脚手架集成 consul
 
 ---
 
-   #  脚手架集成 consul
+   # 脚手架集成 consul
 
 > consul 是一个用Go语言编写的可以自动化网络配置，服务发现并连接云容器的软件
 > 
@@ -11,33 +11,34 @@ title: 脚手架集成 consul
  *为什么选择 consul ？*
  ✅服务发现 |  ✅储存数据元空间 | ✅集成Kubernetes | ✅健康检查 | ✅动态负载均衡 
 
-#### 安装generator-deepexi-spring-cloud相关依赖
-- 安装yeoman
-``` $ npm install -g yo ```
-- 安装generator-deepexi-spring-cloud
- ```$ npm install -g generator-deepexi-spring-cloud ```
+## 安装generator-deepexi-spring-cloud相关依赖
+### 安装yeoman
+`` $ npm install -g yo ``
 
-#### 下载consul到本地并启动consul:
+### 安装generator-deepexi-spring-cloud
+ ``$ npm install -g generator-deepexi-spring-cloud ``
+
+## 下载consul到本地并启动consul:
 ```docker
 docker pull consul:latest 
 docker run -d -p 8500:8500/tcp consul agent -server -ui -bootstrap-expect=1 -client=0.0.0.0
 ```
 
-#### 下载脚手架代码
+## 下载脚手架代码
 ```shell
 mkdir {your folder}
 cd {your folder}
 git clone https://github.com/deepexi/generator-deepexi-spring-cloud.git
 git checkout develop
 ```
-#### 调试模式启动脚手架
+## 调试模式启动脚手架
 
 ```shell
 npm link 
 ```
 即可将本地项目代替 npm module 中对应的包
 
-#### 利用脚手架创建生产者项目
+## 利用脚手架创建生产者项目
 ```
 mkdir consul-producer
 $ cd consul-producer
@@ -96,14 +97,14 @@ public class ProducerController {
 }
 
  ```
- #### 利用脚手架创建消费者项目
+ ## 利用脚手架创建消费者项目
  ```
 mkdir consul-consumer
 $ cd consul-consumer
 $ yo deepexi-spring-cloud
  ```
 -  根据交互任务调度类型选择 consul，生成 demo 选择 y.
--  
+ 
 - 修改applicaition.yml
  ```yml
 spring:
@@ -183,7 +184,7 @@ public class ServiceController {
 }
 ```
 
-### 运行项目并测试
+## 运行项目并测试
 ok，当走到这一步已经差不多要大功告成了：）
 
  - 将两个项目启动，并打开 http://localhost:8500/ui
