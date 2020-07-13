@@ -187,7 +187,7 @@ public interface DemoService {
 }
 ```
 
-可以发现的是，想要开启TX-LCN的LCN事务功能，即在想要开启的地方加上 @LcnTransaction 注解
+可以发现的是，想要开启TX-LCN的LCN事务功能，在想要开启的地方加上 @LcnTransaction 注解即可
 
 ``` java
 @Service
