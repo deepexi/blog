@@ -15,11 +15,38 @@ grammar_cjkRuby: true
 
 如下演示简单的LCN分布式事务：
  ## 步骤引导
+ - 安装 DeepEXI 脚手架及相关依赖
 - 准备依赖环境服务
 JDK1.8+,Mysql5.6+,Redis3.2+,Consul(SpringCloud),ZooKeeper(Dubbo),Git,Maven
 - 初始化数据 
 - 启动TxManager(TM)
 - 配置微服务模块
+
+## 安装 DeepEXI 脚手架及相关依赖
+
+### 安装 yeoman
+
+`` $ npm install -g yo ``
+
+### 安装 DeepEXI 脚手架
+
+ ``$ npm install -g generator-deepexi-spring-cloud ``
+ 
+ ### 下载脚手架代码
+
+```shell
+mkdir {your folder}
+cd {your folder}
+git clone https://github.com/deepexi/generator-deepexi-spring-cloud.git
+git checkout develop
+```
+
+### 调试模式启动脚手架
+
+```shell
+npm link 
+```
+即可将本地项目代替 npm module 中对应的包
 
 ## 初始化数据
 - TM数据初始化
@@ -106,6 +133,15 @@ mybatis.configuration.use-generated-keys=true
 ## 配置微服务模块
 ###  代码清单
 ####  服务A
+ 利用脚手架创建服务A
+
+```
+mkdir tx-client-a
+$ cd tx-client-a
+$ yo deepexi-spring-cloud
+```
+
+ 根据交互任务调度类型选择 TX-LCN
 
 ``` java
 spring:
@@ -225,6 +261,15 @@ public class DemoServiceImpl implements DemoService {
 ```
 
 #### 服务B
+利用脚手架创建服务B
+
+```
+mkdir tx-client-b
+$ cd tx-client-b
+$ yo deepexi-spring-cloud
+```
+
+根据交互任务调度类型选择 TX-LCN
 
 ``` java
 spring:
