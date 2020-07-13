@@ -1,10 +1,10 @@
 ---
-title: generator-deepexi-spring-cloud 脚手架集成 TX-LCN
+title: DeepEXI 脚手架集成 TX-LCN
 tags: 
  
 grammar_cjkRuby: true
 ---
- # generator-deepexi-spring-cloud 脚手架集成 TX-LCN
+ # DeepEXI 脚手架集成 TX-LCN
 
 > TX-LCN定位于一款事务协调性框架，框架其本身并不操作事务，而是基于对事务的协调从而达到事务一致性的效果。
 

@@ -1,9 +1,9 @@
 ---
-title: generator-deepexi-spring-cloud 脚手架集成 consul
+title: DeepEXI 脚手架集成 Consul
 
 ---
 
-   # generator-deepexi-spring-cloud 脚手架集成 Consul
+   # DeepEXI 脚手架集成 Consul
 
 > consul 是一个用Go语言编写的可以自动化网络配置，服务发现并连接云容器的软件
 > 
