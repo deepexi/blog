@@ -1,24 +1,24 @@
 ---
-title: 脚手架集成 consul
+title: generator-deepexi-spring-cloud 脚手架集成 consul
 
 ---
 
-   # 脚手架集成 consul
+   # generator-deepexi-spring-cloud 脚手架集成 Consul
 
 > consul 是一个用Go语言编写的可以自动化网络配置，服务发现并连接云容器的软件
 > 
 
- *为什么选择 consul ？*
+ *为什么选择 Consul ？*
  ✅服务发现 |  ✅储存数据元空间 | ✅集成Kubernetes | ✅健康检查 | ✅动态负载均衡 
 
-## 安装generator-deepexi-spring-cloud相关依赖
-### 安装yeoman
+## 安装 generator-deepexi-spring-cloud相关依赖
+### 安装 yeoman
 `` $ npm install -g yo ``
 
-### 安装generator-deepexi-spring-cloud
+### 安装 generator-deepexi-spring-cloud
  ``$ npm install -g generator-deepexi-spring-cloud ``
 
-## 下载consul到本地并启动consul:
+## 下载 Consul 到本地并启动 Consul:
 ```docker
 docker pull consul:latest 
 docker run -d -p 8500:8500/tcp consul agent -server -ui -bootstrap-expect=1 -client=0.0.0.0
@@ -49,11 +49,12 @@ $ yo deepexi-spring-cloud
 - 修改applicaition.yml
 	- spring.application.name 是consul首页上显示的service name，为了便于识别修改为spring-cloud-consul-producer
 	- 由于consul的健康检查实际上依赖的是actuator，所以还要配置actuator。脚手架默认引入了actuator的依赖及配置， 所以我们只需设置其服务端口即可
+	
 		 ```yml
 		 spring:
 		  application:
-			name: spring-cloud-consul-producer
-
+		name: spring-cloud-consul-producer
+		
 		server:
 		  port: 8086
 		management:
@@ -104,7 +105,7 @@ $ cd consul-consumer
 $ yo deepexi-spring-cloud
  ```
 -  根据交互任务调度类型选择 consul，生成 demo 选择 y.
- 
+
 - 修改applicaition.yml
  ```yml
 spring:
